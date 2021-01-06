@@ -1,6 +1,7 @@
 # [Belize Learning Center](https://jevon-mckenzie.herokuapp.com/)
-
-Belize Learning Center is a collaborative tool that is designed to accomodate discussions among students and/or facilitators. Mission: , Vision: , Objective: , Avtivities: Question/Answer options for each topic.  Dashboard theme. The project was forked from [DinoSaaS](https://www.dinosaas.com/), which I edited to accomodate my initiative. The Argon theme is from [Creative Tim](https://www.creative-tim.com/product/argon-dashboard/?ref=dinosaas.com).
+This is still work in progress!
+Belize Learning Center is a collaborative tool that is designed to accomodate discussions/learning among students and/or facilitators. Data is also strategically collected stored in a DB, whcich will allow for efficient and accurate reporting as well as datamining for future predictions and forecasting on education.
+ Mission: , Vision: , Objective: , Avtivities: Question/Answer options for each topic.  Dashboard theme. The project was forked from [DinoSaaS](https://www.dinosaas.com/), which I edited to accomodate my initiative. The Argon theme is from [Creative Tim](https://www.creative-tim.com/product/argon-dashboard/?ref=dinosaas.com).
 
 
 ![Argon Dashboard](https://res.cloudinary.com/do0vbqz18/image/upload/v1599750892/DinoSaas/argon-dashboard.png)
