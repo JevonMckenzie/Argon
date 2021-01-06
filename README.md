@@ -9,7 +9,7 @@ Belize Learning Center is a collaborative tool that is designed to accomodate di
 ## Getting Started
 Clone the repo:
 
-`git clone git@github.com:Dino-Saas/Argon.git argon-demo`
+`git clone git@github.com:JevonMckenzie/Belize-Learning-Tegether.git`
 
 Download the right gems with the right versions (as specified in the `Gemfile`).
 
