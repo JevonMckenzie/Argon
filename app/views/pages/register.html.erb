@@ -1,5 +1,5 @@
 <% content_for(:title) { 'Create an account' } %>
-<% content_for(:subtitle) { 'Use these awesome forms to login or create new account in your project for free.' } %>
+<% content_for(:subtitle) { '' } %>
 
 <div class="container mt--8 pb-5">
   <div class="row justify-content-center">
@@ -22,31 +22,78 @@
           <div class="text-center text-muted mb-4">
             <small>Or sign up with credentials</small>
           </div>
-          <form role="form">
+           <%= form_for:user, url: users_path do |f| %>
             <div class="form-group">
               <div class="input-group input-group-merge input-group-alternative mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                  <span class="input-group-text"><i class="ni ni-hat-3">Username</i></span>
                 </div>
-                <input class="form-control" placeholder="Name" type="text">
+                <%= f.text_field :name %>
               </div>
             </div>
             <div class="form-group">
               <div class="input-group input-group-merge input-group-alternative mb-3">
                 <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                  <span class="input-group-text"><i class="ni ni-email-83">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</i></span>
                 </div>
-                <input class="form-control" placeholder="Email" type="email">
+                <%= f.text_field :email %>
+              </div>
+            </div>
+              <div class="form-group">
+              <div class="input-group input-group-merge input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="ni ">Image URL</i></span>
+                </div>
+                <%= f.text_field :image %>
               </div>
             </div>
             <div class="form-group">
               <div class="input-group input-group-merge input-group-alternative">
-                <div class="input-group-prepend">
-                  <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                <div class="input-group-prepend">   
+                  <span class="input-group-text"><i class="ni ni-lock-circle-open">Password</i></span>
                 </div>
-                <input class="form-control" placeholder="Password" type="password">
+                <%= f.password_field :password %>
               </div>
+            </div> <p>
+You can choose one or more levels to be a part of</p>
+      
+      <p>
+
+            <div class="form-group " style="align-items: center;">
+
+            <div class="field" style="float:left">
+                  <%= f.label "First Form Math" %> 
+                  <%= f.check_box :firstformmath %> <br />
+                <%= f.label "Second Form Math" %> 
+                  <%= f.check_box :secondformmath %><br />
+                  <%= f.label "Third Form Math" %> 
+                  <%= f.check_box :thirdformmath %> <br />
+                  <%= f.label "Fourth Form Math" %> 
+                    <%= f.check_box :fourthformmath %> <br />
+                   <%= f.label "Tertiary Math" %> 
+                  <%= f.check_box :tertiarymath %> <br />
             </div>
+             <div class="field" style="float:right">
+                  <%= f.label "First Form IT" %> 
+                  <%= f.check_box :firstformit %> <br />
+                  <%= f.label "Second Form IT" %> 
+                  <%= f.check_box :secondformit %> <br />
+                   <%= f.label "Third Form IT" %> 
+                  <%= f.check_box :thirdformit %> <br />
+                  <%= f.label "Fourth Form IT" %> 
+                   <%= f.check_box :fourthformit %> <br />
+                  <%= f.label "Tertiary IT" %> 
+                  <%= f.check_box :tertiaryit %> <br />
+
+            </div>
+            <br>
+
+           
+        
+          </div>
+</p>
+
+            <br><br><br><br><br>
             <div class="text-muted font-italic"><small>password strength: <span class="text-success font-weight-700">strong</span></small></div>
             <div class="row my-4">
               <div class="col-12">
@@ -58,10 +105,10 @@
                 </div>
               </div>
             </div>
-            <div class="text-center">
-              <button type="button" class="btn btn-primary mt-4">Create account</button>
+           <div class="text-center">
+              <%= f.submit "Register", class: "btn btn-large btn-primary" %>
             </div>
-          </form>
+          <% end %>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
     <!-- Brand -->
     <div class="sidenav-header  align-items-center">
       <a class="navbar-brand" href="<%= root_path %>">
-        <%= image_tag "brand/blue.png", class: "navbar-brand-img", alt: "..." %>
+        <%= image_tag "brand/blue.png", class: "navbar-brand-img", alt: "..." %><h3>Learning Center</h3>
       </a>
     </div>
     <div class="navbar-inner">
@@ -11,16 +11,82 @@
       <div class="collapse navbar-collapse" id="sidenav-collapse-main">
         <!-- Nav items -->
         <ul class="navbar-nav">
+                <li class="nav-item">
+            <a class="nav-link" href="<%= pages_register_path %>">
+              <i class="ni ni-circle-08 text-pink"></i>
+              <span class="nav-link-text">Register</span>
+            </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link <%= action_name.eql?('dashboard') ? 'active': '' %>" href="<%= pages_dashboard_path %>">
               <i class="ni ni-tv-2 text-primary"></i>
-              <span class="nav-link-text">Dashboard</span>
+              <span class="nav-link-text">General Dashboard</span>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link <%= action_name.eql?('dashboard') ? 'active': '' %>" href="<%= pages_dashboard_personal_path %>">
+              <i class="ni ni-tv-2 text-primary"></i>
+              <span class="nav-link-text">My Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= action_name.eql?('icons') ? 'active': '' %>" href="<%= firstformmaths_path %>">
+              <i class="ni ni-planet text-orange"></i>
+              <span class="nav-link-text">1st Math</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link <%= action_name.eql?('icons') ? 'active': '' %>" href="<%= pages_icons_path %>">
               <i class="ni ni-planet text-orange"></i>
-              <span class="nav-link-text">Icons</span>
+              <span class="nav-link-text">1st IT</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= action_name.eql?('icons') ? 'active': '' %>" href="<%= pages_icons_path %>">
+              <i class="ni ni-planet text-orange"></i>
+              <span class="nav-link-text">2nd Math</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= action_name.eql?('icons') ? 'active': '' %>" href="<%= pages_icons_path %>">
+              <i class="ni ni-planet text-orange"></i>
+              <span class="nav-link-text">2nd IT</span>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link <%= action_name.eql?('icons') ? 'active': '' %>" href="<%= pages_icons_path %>">
+              <i class="ni ni-planet text-orange"></i>
+              <span class="nav-link-text">3rd Math</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= action_name.eql?('icons') ? 'active': '' %>" href="<%= pages_icons_path %>">
+              <i class="ni ni-planet text-orange"></i>
+              <span class="nav-link-text">3rd IT</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= action_name.eql?('icons') ? 'active': '' %>" href="<%= pages_icons_path %>">
+              <i class="ni ni-planet text-orange"></i>
+              <span class="nav-link-text">4th Math</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= action_name.eql?('icons') ? 'active': '' %>" href="<%= pages_icons_path %>">
+              <i class="ni ni-planet text-orange"></i>
+              <span class="nav-link-text">4th IT</span>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link <%= action_name.eql?('icons') ? 'active': '' %>" href="<%= pages_icons_path %>">
+              <i class="ni ni-planet text-orange"></i>
+              <span class="nav-link-text">Tertiary Math</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link <%= action_name.eql?('icons') ? 'active': '' %>" href="<%= pages_icons_path %>">
+              <i class="ni ni-planet text-orange"></i>
+              <span class="nav-link-text">Tertiary IT</span>
             </a>
           </li>
           <li class="nav-item">
@@ -32,7 +98,7 @@
           <li class="nav-item">
             <a class="nav-link <%= action_name.eql?('tables') ? 'active': '' %>" href="<%= pages_tables_path %>">
               <i class="ni ni-bullet-list-67 text-default"></i>
-              <span class="nav-link-text">Tables</span>
+              <span class="nav-link-text">About Facilitators</span>
             </a>
           </li>
           <li class="nav-item">

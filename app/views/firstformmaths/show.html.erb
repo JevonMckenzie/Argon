@@ -1,0 +1,73 @@
+<div class="header bg-primary pb-6">
+  <div class="container-fluid ">
+    <div class="header-body">
+    	<div class="">
+      <%= render partial: 'pages/header', locals: {
+            icon: 'home',
+            breadcrumb_1: 'Dashboards',
+            breadcrumb_2: 'Default'
+      } %>
+<br>
+<div class="card card-stats">
+<div class="card-body">
+
+<br><h1 align="center"> First Form Math Answers to Question <%=@firstformmath.id%></h1>
+  <div class="container-fluid">
+<h5>
+Topic: <%= @firstformmath.title %>
+</h5>
+<h5>
+Question: <%= @firstformmath.body %>
+</h5><h5>
+Asked By: <%= @firstformmath.user.name %>
+</h5>
+<h5>
+	Total Answers:<%= @firstformmath.comments.count %>
+</h5>
+<br><br>	
+
+
+
+<div class="">
+        <div class="subtitle is-5">
+        <%= render @firstformmath.comments %>
+        <div class="comment-form">
+            <hr />
+            <h5 class="subtitle is-3">Leave an answer</h5>
+             <%= render 'comments/form' %>
+        </div>
+    </div>
+
+</div>
+</div></div></div></div></div>
+<!--
+
+<%= @comments = Comment.all %><br>
+<%  @comments.each do |comment| %>
+<h5> Answer:            </h5>
+<h5> Answered By:</h5>
+<h5> Rating of Answer: </h5><br>
+<%end%>
+-->
+
+
+
+
+<!--
+
+<table width="100%" border=1px; >
+<%= @comments = Comment.all %><br>
+<%  @comments.each do |comment| %>
+
+	<tr><td >
+			User: <%= link_to(comment.user_id)%> 
+		</td>
+		<td>
+			Answer: <%= link_to(comment.body)  %>
+		</td>
+	</tr>
+	<% end %>
+</table> <br>
+--> <br><br>
+
+</div> </div>

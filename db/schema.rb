@@ -10,9 +10,56 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2020_12_17_115854) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "comments", force: :cascade do |t|
+    t.text "body"
+    t.integer "commentable_id"
+    t.string "commentable_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.integer "firstformmath_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "firstformmaths", force: :cascade do |t|
+    t.text "title"
+    t.text "body"
+    t.string "url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_firstformmaths_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password"
+    t.string "password_confirmation"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "remember_token"
+    t.string "password_digest"
+    t.boolean "firstformmath"
+    t.boolean "firstformit"
+    t.boolean "secondformmath"
+    t.boolean "secondformit"
+    t.boolean "thirdformmath"
+    t.boolean "thirdformit"
+    t.boolean "fourthformmath"
+    t.boolean "fourthformit"
+    t.boolean "tertiarymath"
+    t.boolean "tertiaryit"
+    t.string "image"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["remember_token"], name: "index_users_on_remember_token"
+  end
+
+  add_foreign_key "comments", "users"
+  add_foreign_key "firstformmaths", "users"
 end

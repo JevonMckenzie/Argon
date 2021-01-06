@@ -200,10 +200,19 @@ end
           <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="media align-items-center">
               <span class="avatar avatar-sm rounded-circle">
-                <%= image_tag "theme/team-4.jpg", class: "navbar-brand-img", alt: "..." %>
+                <% if signed_in? %>
+                <%= image_tag current_user.image, class: "navbar-brand-img", alt: "..." %>
+                <% else %>
+                <%= image_tag "brand/favicon.png", class: "navbar-brand-img", alt: "..." %>
+                <% end %>
               </span>
               <div class="media-body  ml-2  d-none d-lg-block">
-                <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+        
+                <% if signed_in? %>
+                <span class="mb-0 text-sm  font-weight-bold"> Hello <%= current_user.name %></span>
+                <% else %>
+                 <span class="mb-0 text-sm  font-weight-bold">Hi, you're not logged in</span>
+                 <% end %>
               </div>
             </div>
           </a>
@@ -230,7 +239,12 @@ end
             <div class="dropdown-divider"></div>
             <a href="#!" class="dropdown-item">
               <i class="ni ni-user-run"></i>
-              <span>Logout</span>
+              <% if signed_in? %>
+              <span><%= link_to 'Sign Out', signout_path %></span>
+              <% else %>
+              <span><%= link_to 'Sign In', signin_path %></span>
+              <% end %>
+
             </a>
           </div>
         </li>

@@ -1,0 +1,7 @@
+<h1>First Form Math Questions</h1>
+<%= @firstformmaths = Firstformmath.all %>
+<% @firstformmaths.each do |firstformmath| %>
+  <p>
+    <%= link_to(firstformmath.title, firstformmath.url, target: "_blank") %> - <%= link_to("Show Page", firstformmath) %>
+  </p>
+<% end %>

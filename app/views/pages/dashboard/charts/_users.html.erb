@@ -1,0 +1,61 @@
+
+<div class="card">
+
+  <div class="card-header bg-transparent">
+    <div class="row align-items-center">
+      <div class="col">
+        <h6 class="text-uppercase text-muted ls-1 mb-1">Frequency of Questions by Topic</h6>
+        <h5 class="h3 mb-0">Hottest Topics</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <!-- Chart -->
+    <div class="chart">
+     <canvas id="myChart" class="chart-canvas" width="400" height="325"></canvas>
+    </div>
+  </div>
+
+</div>
+
+<script>
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['1st Math', '1st IT', '2nd Math', '2nd IT', '3rd Math', '3rd IT', '4th Math', '4th IT', 'Tertiary Math', 'Tertiary IT'],
+        datasets: [{
+            label: 'Users',
+            data: [<%= User.where(firstformmath: true).count %>, <%= User.where(firstformit: true).count %>, <%= User.where(secondformmath: true).count %>,<%= User.where(secondformit: true).count %>, <%= User.where(thirdformmath: true).count %>, <%= User.where(thirdformit: true).count %>, <%= User.where(fourthformmath: true).count %>, <%= User.where(fourthformmath: true).count %>],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+</script>

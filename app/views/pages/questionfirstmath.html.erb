@@ -1,0 +1,40 @@
+
+<div class="header bg-primary pb-6">
+  <div class="container-fluid ">
+    <div class="header-body">
+      <div class="">
+      <%= render partial: 'pages/header', locals: {
+            icon: 'home',
+            breadcrumb_1: 'Dashboards',
+            breadcrumb_2: 'Default'
+      } %>
+<br>
+<div class="card card-stats">
+<div class="card-body">
+
+
+
+<h1 align="center"> First Form Math </h1>
+       <%= form_for(:firstformmath, url: firstformmaths_path) do |f| %>
+     <table align="left" width=""><tr><td>Topic
+              <%= f.label :topic %><br>
+    <%= f.select :title, [ 'Sets','Algebra','Consumer Arithmethic', 'Integers', 'Other' ], :prompt => 'Select One' %>
+
+</td></tr><tr>
+         <td>Question
+
+       
+             <div>
+                <%= f.text_area :body, size: "100x10"%>
+             
+            </div>
+        </td></tr>
+        <tr><td>
+         
+            <div class="text-center">
+               <%= f.submit "Submit Question", class: "btn btn-large btn-primary" %>
+            </div>
+          </td></tr></table>
+        <% end %>
+
+</div></div></div></div></div></div>

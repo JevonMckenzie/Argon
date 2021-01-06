@@ -1,0 +1,9 @@
+<% if user == current_user %> 
+<% provide(:title, @user.name) %>
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
+<% else %>
+<h2> You can only view your profile page </h2>
+<% end %>

@@ -1,0 +1,33 @@
+<div class="header bg-primary pb-6">
+  <div class="container-fluid ">
+    <div class="header-body">
+    	<div class="">
+      <%= render partial: 'pages/header', locals: {
+            icon: 'home',
+            breadcrumb_1: 'Dashboards',
+            breadcrumb_2: 'Default'
+      } %>
+<br>
+<div class="card card-stats">
+<div class="card-body">
+        
+
+<h1 align="center"> First Form Math Questions </h1><br>
+  
+<a href="<%= pages_questionfirstmath_path %>" class="btn btn-sm btn-neutral">New Question</a><br><br>
+
+
+
+<% @firstformmaths = Firstformmath.all %>
+<% @firstformmaths.each do |firstformmath| %>
+	<br>Question ID: <%= link_to(firstformmath.id)  %><br>
+		Topic: <%= link_to(firstformmath.title)  %> - <%= link_to("Show Page", firstformmath) %> <br> 
+		User: <%= link_to(firstformmath.user.name)  %>	<br>	Email: <%= link_to(firstformmath.user.email)  %>								<br>
+		Question: <%= link_to(firstformmath.body)  %><br>Total Responses: <%= link_to(firstformmath.comments.count) %>
+		 <br><br>
+
+	
+<% end %>
+</div></div>
+</div>
+</div></div>

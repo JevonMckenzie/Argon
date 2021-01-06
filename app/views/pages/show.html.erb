@@ -1,0 +1,42 @@
+<br><h1 align="center"> First Form Math</h1>
+  <div class="container-fluid">
+
+
+<h3> Topic:</h3>
+<h3> Question: </h3>
+<h5> User:  </h5>
+<h5> Student/Facilitator:</h5>
+<h5> Rating of Answer: </h5><br>
+
+<%= @firstformmath=Firstformmath.all %>
+
+<%= @firstformmath.each do |f| %>
+
+<p>
+  <strong>Title:</strong>
+  <%= f.title %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= f.body %>
+</p> 
+<% end %>
+
+<table width="100%" border=1px; >
+<%= @comments = Comment.all %><br>
+<%  @comments.each do |comment| %>
+
+	<tr><td >
+			User: <%= link_to(comment.user_id)%> 
+		</td>
+		<td>
+			Answer: <%= link_to(comment.body)  %>
+		</td>
+	</tr>
+	<% end %>
+</table> <br>
+
+
+
+</div><br>

@@ -1,0 +1,15 @@
+<article class="media">
+    <div class="media-content">
+      <div class="content">
+        <p><% @firstformmath.comments.each do |comment| %>
+          Answer ID: <%= comment.id %><br>
+          Answer: <%= comment.body %><br>
+      Answered By:   <%= comment.user.name %><br>
+      <%= link_to 'Delete', [comment.firstformmath, comment],
+                  method: :delete,  data: { confirm: 'Are you sure?' } %><br><br>
+      <%end%>
+        </p>
+      </div>
+    </div>
+     
+  </article>

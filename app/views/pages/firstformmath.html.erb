@@ -1,0 +1,20 @@
+
+<br><h1 align="center"> First Form Math Questions </h1><br>
+  <div class="container-fluid">
+
+
+<%= link_to("Click Here To Ask New Question", pages_questionfirstmath_path) %><br><br>
+
+<% @firstformmaths = Firstformmath.all %>
+<% @firstformmaths.each do |firstformmath| %>
+	<br>Question ID: <%= link_to(firstformmath.id)  %><br>
+		Topic: <%= link_to(firstformmath.title)  %> - <%= link_to("Show Page", firstmath_path) %> <br> 
+		User: <%= link_to(firstformmath.user.name)  %>	<br>	Email: <%= link_to(firstformmath.user.email)  %>								<br>
+		Question: <%= link_to(firstformmath.body)  %><br>
+		Total Responses: <%= link_to(firstformmath.comments.count) %>
+		 <br><br>
+
+	
+<% end %>
+
+</div>
