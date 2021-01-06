@@ -4,7 +4,7 @@ Belize Learning Center is a collaborative tool that is designed to accomodate di
  Mission: , Vision: , Objective: , Avtivities: Question/Answer options for each topic.  Dashboard theme. The project was forked from [DinoSaaS](https://www.dinosaas.com/), which I edited to accomodate my initiative. The Argon theme is from [Creative Tim](https://www.creative-tim.com/product/argon-dashboard/?ref=dinosaas.com).
 
 
-![Argon Dashboard](https://res.cloudinary.com/do0vbqz18/image/upload/v1599750892/DinoSaas/argon-dashboard.png)
+![Argon Dashboard](https://jevon-mckenzie.herokuapp.com/)
 
 ## Getting Started
 Clone the repo:
