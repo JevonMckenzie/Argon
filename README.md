@@ -1,6 +1,6 @@
 # [Belize Learning Center](https://jevon-mckenzie.herokuapp.com/)
 This is still work in progress!
-Belize Learning Center is a collaborative tool that is designed to accomodate discussions / learning among students and / or facilitators. Data is also strategically collected stored in a DB, whcich will allow for efficient and accurate reporting as well as datamining for related predictions and forecasting.
+Belize Learning Center is a collaborative tool that is designed to accomodate discussions/learning among students and/or facilitators. Data is also strategically collected and stored in a DB, whcich will allow for efficient and accurate reporting as well as datamining for related predictions and forecasting.
  Mission: , Vision: , Objective: , Avtivities: Question/Answer options for each topic.  Dashboard theme. The project was forked from [DinoSaaS](https://www.dinosaas.com/), which I edited to accomodate my initiative. The Argon theme is from [Creative Tim](https://www.creative-tim.com/product/argon-dashboard/?ref=dinosaas.com).
 
 
